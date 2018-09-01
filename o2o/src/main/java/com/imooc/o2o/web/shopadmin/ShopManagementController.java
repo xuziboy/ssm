@@ -40,6 +40,7 @@ public class ShopManagementController {
 	private ShopCategoryService shopCategoryService;
 	@Autowired
 	private AreaService areaService;
+	//根据id获取信息
 	@RequestMapping(value="/getshopbyid",method=RequestMethod.GET)
 	@ResponseBody
 	private Map<String,Object> getShopById(HttpServletRequest request){
