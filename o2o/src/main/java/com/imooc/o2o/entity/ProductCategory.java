@@ -4,7 +4,7 @@ import java.util.Date;
 //商品类别
 public class ProductCategory {
 	//Id
-	private Long productCategotyId;
+	private Long productCategoryId;
 	//店铺Id
 	private Long shopId;
 	//商品类别名称
@@ -13,11 +13,11 @@ public class ProductCategory {
 	private Date createTime;
 	
 	
-	public Long getProductCategotyId() {
-		return productCategotyId;
+	public Long getProductCategoryId() {
+		return productCategoryId;
 	}
-	public void setProductCategotyId(Long productCategotyId) {
-		this.productCategotyId = productCategotyId;
+	public void setProductCategotyId(Long productCategoryId) {
+		this.productCategoryId = productCategoryId;
 	}
 	public Long getShopId() {
 		return shopId;

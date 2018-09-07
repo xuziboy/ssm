@@ -4,7 +4,9 @@ public enum ProductCategoryStateEnum {
 	
 	SUCCESS(1,"创建成功"),
 	INNER_ERROR(-1001,"操作失败"),
-	EMPTY_LIST(-1002,"添加数少于1");
+	EMPTY_LIST(-1002,"添加数少于1"),
+	DELETE_SUCCESS(2,"删除成功"),
+	DELETE_EMPTY(-1003,"删除数少于1");
 	
 	private int state;
 	private String stateInfo;

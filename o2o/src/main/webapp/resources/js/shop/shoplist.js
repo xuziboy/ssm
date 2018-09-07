@@ -37,7 +37,7 @@ $(function(){
 		if(status == 0){
 			return '审核中';
 		}else if(status == 1){
-			return '店铺非法';
+			return '店铺合法';
 		}else{
 			return '审核通过';
 		}

@@ -1,5 +1,6 @@
 package com.imooc.o2o.web.shopadmin;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -48,6 +49,7 @@ public class ProductCategoryManagementController {
 		Shop currentShop =(Shop)request.getSession().getAttribute("currentShop");
 		for(ProductCategory pc:productCategoryList) {
 			pc.setShopId(currentShop.getShopId());
+			pc.setCreateTime(new Date());
 		}
 		if(productCategoryList!=null&&productCategoryList.size()>0) {
 			try {
@@ -68,5 +70,32 @@ public class ProductCategoryManagementController {
 			modelMap.put("errMsg", "请输入至少一个商品类别");
 		}
 		return modelMap;
+	}
+	
+	@RequestMapping(value="/removeproductcategory",method=RequestMethod.POST)
+	@ResponseBody
+	private Map<String,Object> removeProductCategory(long productCategoryId,HttpServletRequest request){
+		Map<String,Object> modelMap = new HashMap<String,Object>();
+		Shop currentShop =(Shop)request.getSession().getAttribute("currentShop");
+		if(productCategoryId >= 0) {
+			try {
+				ProductCategoryExecution pe = productCategoryService.deleteProductCategory(productCategoryId,currentShop.getShopId());
+				if(pe.getState() == ProductCategoryStateEnum.DELETE_SUCCESS.getState()) {
+					modelMap.put("success", true);
+				}else {
+					modelMap.put("success", false);
+					modelMap.put("errMsg", pe.getStateInfo());
+				}
+			}catch(Exception e) {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", e.toString());
+				return modelMap;
+			}
+		}else {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "请至少输入一个要删除的商品类别");
+		}
+		return modelMap;
+		
 	}
 }

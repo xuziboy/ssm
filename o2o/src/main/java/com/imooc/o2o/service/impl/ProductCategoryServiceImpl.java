@@ -30,7 +30,7 @@ public class ProductCategoryServiceImpl implements ProductCategoryService{
 			try {
 				int effectedNum = productCategoryDao.batchInsertProductCategory(productCategoryList);
 				if(effectedNum<=0){
-					throw new ProductCategoryOperationException("店铺类别创建是爱");
+					throw new ProductCategoryOperationException("店铺类别创建失败");
 				}else {
 					return new ProductCategoryExecution(ProductCategoryStateEnum.SUCCESS);
 				}
@@ -40,6 +40,26 @@ public class ProductCategoryServiceImpl implements ProductCategoryService{
 		}else {
 			return new ProductCategoryExecution(ProductCategoryStateEnum.EMPTY_LIST);	
 		}
+	}
+
+	@Override
+	public ProductCategoryExecution deleteProductCategory(long productCategoryId,long shopId)
+			throws ProductCategoryOperationException {
+		if(productCategoryId >= 0) {
+			try {
+				int effectedNum = productCategoryDao.deleteProductCategory(productCategoryId,shopId);
+				if(effectedNum <= 0) {
+					throw new ProductCategoryOperationException("删除失败");
+				}else {
+					return new ProductCategoryExecution(ProductCategoryStateEnum.DELETE_SUCCESS);
+				}
+			}catch(Exception e) {
+				throw new ProductCategoryOperationException("batchInsertProductCategory error:" + e.getMessage());
+			}
+		}else {
+			return new ProductCategoryExecution(ProductCategoryStateEnum.DELETE_EMPTY);
+		}
+		
 	}
 	
 
