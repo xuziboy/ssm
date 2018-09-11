@@ -18,6 +18,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.imooc.o2o.dto.ImageHolder;
 import com.imooc.o2o.dto.ShopExecution;
 import com.imooc.o2o.entity.Personinfo;
 import com.imooc.o2o.entity.Shop;
@@ -170,7 +171,8 @@ public class ShopManagementController {
 			shop.setOwner(owner);
 			ShopExecution se;
 			try {
-				se = shopService.addShop(shop,shopImg.getInputStream(),shopImg.getOriginalFilename());
+				ImageHolder imageHolder = new ImageHolder(shopImg.getOriginalFilename(),shopImg.getInputStream());
+				se = shopService.addShop(shop,imageHolder);
 				if(se.getState() == ShopStateEnum.CHECK.getState()) {
 					modelMap.put("success", true);
 					//该用户可以操作的店铺列表
@@ -230,9 +232,10 @@ public class ShopManagementController {
 			ShopExecution se;
 			try {
 				if(shopImg == null) {
-					se = shopService.modifyShop(shop,null,null);
+					se = shopService.modifyShop(shop,null);
 				}else {
-					se = shopService.modifyShop(shop,shopImg.getInputStream(),shopImg.getOriginalFilename());
+					ImageHolder imageHolder = new ImageHolder(shopImg.getOriginalFilename(),shopImg.getInputStream());
+					se = shopService.modifyShop(shop,imageHolder);
 				}
 				if(se.getState() == ShopStateEnum.SUCCESS.getState()) {
 					modelMap.put("success", true);
@@ -251,30 +254,4 @@ public class ShopManagementController {
 			return modelMap;
 		}		
 	}
-//	private static void inputStreamToFile(InputStream ins,File file) {
-//		FileOutputStream os = null;
-//		try {
-//			os = new FileOutputStream(file);
-//			int bytesRead = 0;
-//			byte[] buffer = new byte[1024];
-//			while((bytesRead = ins.read(buffer))!=-1) {
-//				os.write(buffer, 0, bytesRead);
-//			}
-//		}catch(Exception e) {
-//			throw new RuntimeException("调用inputStreamToFile产生异常:"+e.getMessage());
-//		}finally{
-//			try {
-//					{
-//					if(os!=null) {
-//						os.close();
-//					}
-//					if(ins!=null) {
-//						ins.close();
-//					}
-//			}
-//		}catch(IOException e) {
-//			throw new RuntimeException("inputStreamToFile关闭异常:"+e.getMessage());
-//		}
-//		}
-//	}
 }

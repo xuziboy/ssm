@@ -278,3 +278,77 @@
 2018-09-06 22:24:50.978 [main] DEBUG c.i.o.d.P.batchInsertProductCategory-==>  Preparing: insert into tb_product_category(product_category_name,priority,create_time,shop_id) values ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
 2018-09-06 22:24:51.60 [main] DEBUG c.i.o.d.P.batchInsertProductCategory-==> Parameters: 商品类别1(String), 1(Integer), 2018-09-06 22:24:50.153(Timestamp), 13(Long), 商品类别2(String), 2(Integer), 2018-09-06 22:24:50.153(Timestamp), 13(Long)
 2018-09-06 22:24:51.213 [main] DEBUG c.i.o.d.P.batchInsertProductCategory-<==    Updates: 2
+2018-09-07 10:17:09.585 [main] DEBUG c.i.o.dao.ProductCategoryDao.deleteProductCategory-==>  Preparing: delete from tb_product_category where product_category_id = ? 
+2018-09-07 10:17:09.639 [main] DEBUG c.i.o.dao.ProductCategoryDao.deleteProductCategory-==> Parameters: 7(Long)
+2018-09-07 10:17:09.714 [main] DEBUG c.i.o.dao.ProductCategoryDao.deleteProductCategory-<==    Updates: 1
+2018-09-07 14:26:21.184 [main] DEBUG c.i.o.dao.ProductCategoryDao.deleteProductCategory-==>  Preparing: delete from tb_product_category where product_category_id = ? and shop_id = ? 
+2018-09-08 14:44:27.892 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==>  Preparing: insert into tb_product_img(img_addr,img_desc,priority, create_time,product_id) values ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2018-09-08 14:44:27.973 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-09-08 14:44:27.176(Timestamp), 1(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-09-08 14:44:27.176(Timestamp), 1(Long)
+2018-09-08 14:45:42.197 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==>  Preparing: insert into tb_product_img(img_addr,img_desc,priority, create_time,product_id) values ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2018-09-08 14:45:42.250 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2018-09-08 14:45:41.621(Timestamp), 1(Long), 图片2(String), 测试图片2(String), 1(Integer), 2018-09-08 14:45:41.621(Timestamp), 1(Long)
+2018-09-08 14:45:42.318 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-<==    Updates: 2
+2018-09-08 15:20:46.128 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==>  Preparing: insert into tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) values (?,?,?,?, ?,?,?,?, ?,?,? ) 
+2018-09-08 15:21:33.78 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==>  Preparing: insert into tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) values (?,?,?,?, ?,?,?,?, ?,?,? ) 
+2018-09-08 15:24:09.315 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==>  Preparing: insert into tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) values (?,?,?,?, ?,?,?,?, ?,?,? ) 
+2018-09-08 15:26:23.235 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==>  Preparing: insert into tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) values (?,?,?,?, ?,?,?,?, ?,?,? ) 
+2018-09-08 15:26:23.296 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==> Parameters: 测试1(String), 测试desc(String), test1(String), null, null, 1(Integer), 2018-09-08 15:26:22.66(Timestamp), 2018-09-08 15:26:22.66(Timestamp), 1(Integer), 13(Long), 13(Long)
+2018-09-08 15:26:23.341 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-<==    Updates: 1
+2018-09-10 22:26:59.479 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==>  Preparing: insert into tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) values (?,?,?,?, ?,?,?,?, ?,?,? ) 
+2018-09-10 22:26:59.550 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==> Parameters: 测试2(String), 测试desc2(String), test2(String), null, null, 2(Integer), 2018-09-10 22:26:58.76(Timestamp), 2018-09-10 22:26:58.76(Timestamp), 1(Integer), 13(Long), 13(Long)
+2018-09-10 22:26:59.613 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-<==    Updates: 1
+2018-09-10 23:03:47.30 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023034775602.jpg
+2018-09-10 23:03:47.32 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023034775602.jpg
+2018-09-10 23:03:47.385 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==>  Preparing: insert into tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) values (?,?,?,?, ?,?,?,?, ?,?,? ) 
+2018-09-10 23:03:47.435 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==> Parameters: 测试商品1(String), 测试商品1(String), 13\2018091023034775602.jpg(String), null, null, 20(Integer), 2018-09-10 23:03:47.015(Timestamp), 2018-09-10 23:03:47.015(Timestamp), 1(Integer), 11(Long), 13(Long)
+2018-09-10 23:03:47.475 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-<==    Updates: 1
+2018-09-10 23:03:47.483 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023034758522.jpg
+2018-09-10 23:03:47.483 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023034758522.jpg
+2018-09-10 23:03:47.706 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023034767710.jpg
+2018-09-10 23:03:47.706 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023034767710.jpg
+2018-09-10 23:03:47.818 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==>  Preparing: insert into tb_product_img(img_addr,img_desc,priority, create_time,product_id) values ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2018-09-10 23:03:47.826 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==> Parameters: 13\2018091023034758522.jpg(String), null, null, 2018-09-10 23:03:47.706(Timestamp), 4(Long), 13\2018091023034767710.jpg(String), null, null, 2018-09-10 23:03:47.788(Timestamp), 4(Long)
+2018-09-10 23:05:14.157 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023051129658.jpg
+2018-09-10 23:05:18.264 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023051129658.jpg
+2018-09-10 23:05:18.697 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==>  Preparing: insert into tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) values (?,?,?,?, ?,?,?,?, ?,?,? ) 
+2018-09-10 23:05:18.757 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==> Parameters: 测试商品1(String), 测试商品1(String), 13\2018091023051129658.jpg(String), null, null, 20(Integer), 2018-09-10 23:05:10.974(Timestamp), 2018-09-10 23:05:10.974(Timestamp), 1(Integer), 11(Long), 13(Long)
+2018-09-10 23:05:18.786 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-<==    Updates: 1
+2018-09-10 23:05:20.692 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023051811665.jpg
+2018-09-10 23:05:23.20 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023051811665.jpg
+2018-09-10 23:05:25.555 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023052457848.jpg
+2018-09-10 23:05:27.79 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023052457848.jpg
+2018-09-10 23:05:28.884 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==>  Preparing: insert into tb_product_img(img_addr,img_desc,priority, create_time,product_id) values ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2018-09-10 23:05:30.630 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==> Parameters: 13\2018091023051811665.jpg(String), null, null, 2018-09-10 23:05:23.242(Timestamp), 5(Long), 13\2018091023052457848.jpg(String), null, null, 2018-09-10 23:05:27.41(Timestamp), 5(Long)
+2018-09-10 23:06:29.722 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023062952653.jpg
+2018-09-10 23:06:29.730 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023062952653.jpg
+2018-09-10 23:06:30.05 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==>  Preparing: insert into tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) values (?,?,?,?, ?,?,?,?, ?,?,? ) 
+2018-09-10 23:06:30.57 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==> Parameters: 测试商品1(String), 测试商品1(String), 13\2018091023062952653.jpg(String), null, null, 20(Integer), 2018-09-10 23:06:29.708(Timestamp), 2018-09-10 23:06:29.708(Timestamp), 1(Integer), 11(Long), 13(Long)
+2018-09-10 23:06:30.82 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-<==    Updates: 1
+2018-09-10 23:06:30.97 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023063032874.jpg
+2018-09-10 23:06:30.97 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023063032874.jpg
+2018-09-10 23:06:30.264 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023063056239.jpg
+2018-09-10 23:06:30.265 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023063056239.jpg
+2018-09-10 23:06:30.355 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==>  Preparing: insert into tb_product_img(img_addr,img_desc,priority, create_time,product_id) values ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2018-09-10 23:06:30.357 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==> Parameters: 13\2018091023063032874.jpg(String), null, null, 2018-09-10 23:06:30.264(Timestamp), 6(Long), 13\2018091023063056239.jpg(String), null, null, 2018-09-10 23:06:30.328(Timestamp), 6(Long)
+2018-09-10 23:10:13.783 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023101379392.jpg
+2018-09-10 23:10:13.786 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023101379392.jpg
+2018-09-10 23:10:14.66 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==>  Preparing: insert into tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) values (?,?,?,?, ?,?,?,?, ?,?,? ) 
+2018-09-10 23:10:14.114 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==> Parameters: 测试商品1(String), 测试商品1(String), 13\2018091023101379392.jpg(String), null, null, 20(Integer), 2018-09-10 23:10:13.775(Timestamp), 2018-09-10 23:10:13.775(Timestamp), 1(Integer), 11(Long), 13(Long)
+2018-09-10 23:10:14.119 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-<==    Updates: 1
+2018-09-10 23:10:14.127 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023101459840.jpg
+2018-09-10 23:10:14.128 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023101459840.jpg
+2018-09-10 23:10:14.323 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023101483390.jpg
+2018-09-10 23:10:14.324 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023101483390.jpg
+2018-09-10 23:10:14.412 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==>  Preparing: insert into tb_product_img(img_addr,img_desc,priority, create_time,product_id) values ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2018-09-10 23:10:14.417 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==> Parameters: 13\2018091023101459840.jpg(String), null, null, 2018-09-10 23:10:14.323(Timestamp), 7(Long), 13\2018091023101483390.jpg(String), null, null, 2018-09-10 23:10:14.383(Timestamp), 7(Long)
+2018-09-10 23:13:10.855 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023131089990.jpg
+2018-09-10 23:13:10.857 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023131089990.jpg
+2018-09-10 23:13:11.128 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==>  Preparing: insert into tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) values (?,?,?,?, ?,?,?,?, ?,?,? ) 
+2018-09-10 23:13:11.174 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-==> Parameters: 测试商品1(String), 测试商品1(String), 13\2018091023131089990.jpg(String), null, null, 20(Integer), 2018-09-10 23:13:10.848(Timestamp), 2018-09-10 23:13:10.848(Timestamp), 1(Integer), 11(Long), 13(Long)
+2018-09-10 23:13:11.176 [main] DEBUG com.imooc.o2o.dao.ProductDao.insertProduct-<==    Updates: 1
+2018-09-10 23:13:11.183 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023131191960.jpg
+2018-09-10 23:13:11.183 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023131191960.jpg
+2018-09-10 23:13:11.368 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current relativeAddr is :13\2018091023131196811.jpg
+2018-09-10 23:13:11.368 [main] DEBUG com.imooc.o2o.web.superadmin.AreaController-current complete addr is:E:\图片\13\2018091023131196811.jpg
+2018-09-10 23:13:11.458 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==>  Preparing: insert into tb_product_img(img_addr,img_desc,priority, create_time,product_id) values ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2018-09-10 23:13:11.460 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-==> Parameters: 13\2018091023131191960.jpg(String), null, null, 2018-09-10 23:13:11.368(Timestamp), 8(Long), 13\2018091023131196811.jpg(String), null, null, 2018-09-10 23:13:11.431(Timestamp), 8(Long)
+2018-09-10 23:13:11.467 [main] DEBUG c.i.o2o.dao.ProductImgDao.batchInsertProductImg-<==    Updates: 2

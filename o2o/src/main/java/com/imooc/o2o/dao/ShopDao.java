@@ -29,14 +29,14 @@ public interface ShopDao {
 	 * @return
 	 */
 	Shop queryByShopId(Long shopId);
-	/*
+	/**
 	 * 新增店铺
 	 * @param shop
 	 * @return
 	 */
 	int insertShop(Shop shop);
 	
-	/*
+	/**
 	 * 更新店铺信息
 	 */
 	int updateShop(Shop shop);

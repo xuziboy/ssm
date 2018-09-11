@@ -2,7 +2,6 @@ package com.imooc.o2o.util;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -12,6 +11,7 @@ import javax.imageio.ImageIO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.imooc.o2o.dto.ImageHolder;
 import com.imooc.o2o.web.superadmin.AreaController;
 
 import net.coobird.thumbnailator.Thumbnails;
@@ -22,16 +22,16 @@ public class ImageUtil {
 	private static final SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
 	private static final Random r = new Random();
 	static Logger logger = LoggerFactory.getLogger(AreaController.class);
-	public static String generateThumbnail(InputStream thumbnailInputStream,String fileName,String targetAddr) {
+	public static String generateThumbnail(ImageHolder thumbnail,String targetAddr) {
 		String realFileName = getRandomFileName();
-		String extension = getFileExtension(fileName);
+		String extension = getFileExtension(thumbnail.getImageName());
 		makeDirPath(targetAddr);
 		String relativeAddr = targetAddr + realFileName + extension;
 		logger.debug("current relativeAddr is :"+relativeAddr);
 		File dest = new File(PathUtil.getImgBasePath() + relativeAddr);
 		logger.debug("current complete addr is:"+PathUtil.getImgBasePath()+relativeAddr);
 		try {
-			Thumbnails.of(thumbnailInputStream).size(200,200)
+			Thumbnails.of(thumbnail.getImage()).size(200,200)
 			.watermark(Positions.BOTTOM_RIGHT,
 					ImageIO.read(new File(basePath + "/123.jpg")),0.25f)
 			.outputQuality(0.8f).toFile(dest);
@@ -40,6 +40,27 @@ public class ImageUtil {
 		}
 		return relativeAddr;
 	}
+	
+	public static String generateNormalImg(ImageHolder thumbnail,String targetAddr) {
+		String realFileName = getRandomFileName();
+		String extension = getFileExtension(thumbnail.getImageName());
+		makeDirPath(targetAddr);
+		String relativeAddr = targetAddr + realFileName + extension;
+		logger.debug("current relativeAddr is :"+relativeAddr);
+		File dest = new File(PathUtil.getImgBasePath() + relativeAddr);
+		logger.debug("current complete addr is:"+PathUtil.getImgBasePath()+relativeAddr);
+		try {
+			Thumbnails.of(thumbnail.getImage()).size(337,640)
+			.watermark(Positions.BOTTOM_RIGHT,
+					ImageIO.read(new File(basePath + "/123.jpg")),0.25f)
+			.outputQuality(0.9f).toFile(dest);
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+		return relativeAddr;
+	}
+	
+	
 	/**
 	 * 创建目标路径所涉及到的目录，即/home/work/xiangze/xxx.jpg
 	 * 那么 home work xiangze这三个文件夹都得自动创建
