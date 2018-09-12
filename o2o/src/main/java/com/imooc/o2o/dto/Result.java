@@ -32,7 +32,7 @@ public class Result<T> {
 		this.setErrorMsg(errorMsg);
 	}
 	
-	public boolean idSuccess() {
+	public boolean getSuccess() {
 		return success;
 	}
 	
