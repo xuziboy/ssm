@@ -75,7 +75,7 @@ public class ShopManagementController {
 		user.setName("test");
 		request.getSession().setAttribute("user",user);
 		user = (Personinfo)request.getSession().getAttribute("user");
-		user.setUserId(1L);
+		user.setUserId(8L);
 		try {
 			Shop shopCondition =new Shop();
 			shopCondition.setOwner(user);

@@ -112,7 +112,7 @@
 	            and product_name like '%${productCondition.productName}%'
 	        </if>
 	        <if test="productCondition.enableStatus!=null">
-	            and enable_status = productCondition.enableStatus
+	            and enable_status = #{productCondition.enableStatus}
 	        </if>
 	    </where>
 	    order by
@@ -134,7 +134,7 @@
 	            and product_name like '%${productCondition.productName}%'
 	        </if>
 	        <if test="productCondition.enableStatus!=null">
-	            and enable_status = productCondition.enableStatus
+	            and enable_status = #{productCondition.enableStatus}
 	        </if>
 	    </where>
 	</select>
