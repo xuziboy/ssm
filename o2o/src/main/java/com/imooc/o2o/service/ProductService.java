@@ -15,4 +15,32 @@ public interface ProductService {
 	 */
 	ProductExecution addProduct(Product product,ImageHolder thumbnail,
 			List<ImageHolder> producImgList) throws ProductOperationException;
+	
+	/**
+	 * 修改商品信息以及图片处理
+	 * @param product
+	 * @param thumbnail
+	 * @param productImgHolderList
+	 * @return
+	 * @throws ProductOperationException
+	 */
+	ProductExecution modifyProduct(Product product,ImageHolder thumbnail,List<ImageHolder> productImgHolderList)
+	throws ProductOperationException;
+	/**
+	 * 查询商品信息根据Id
+	 * @param productId
+	 * @return
+	 */
+	Product getProductById(Long productId);
+	
+	/**
+	 * 查询商品列表
+	 * @param productCondition
+	 * @param pageIndex
+	 * @param rowIndex
+	 * @return
+	 */
+	ProductExecution getProductList(Product productCondition,int pageIndex,int pageSize);
+	
+	
 }

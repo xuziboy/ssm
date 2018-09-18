@@ -79,7 +79,7 @@ public class ShopManagementController {
 		try {
 			Shop shopCondition =new Shop();
 			shopCondition.setOwner(user);
-			ShopExecution se = shopService.getShopList(shopCondition, 0, 3);
+			ShopExecution se = shopService.getShopList(shopCondition, 0, 999);
 			modelMap.put("success", true);
 			modelMap.put("shopList", se.getShopList());
 			modelMap.put("user", user);

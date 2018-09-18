@@ -18,4 +18,18 @@
 			)
 		</foreach>
 	</insert>
+	
+	<delete id="deleteProductImgByProductId">
+	    delete from
+	    tb_product_img
+	    where 
+	    product_id=
+	    #{productId}
+	</delete>
+	<select id="queryProductImgList" parameterType="long" resultType="com.imooc.o2o.entity.ProductImg">
+	    select *
+	    from tb_product_img
+	    where 
+	    product_id = #{productId}    
+	</select>
 </mapper>

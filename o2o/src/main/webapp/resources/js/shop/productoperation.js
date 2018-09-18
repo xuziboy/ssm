@@ -41,7 +41,7 @@ $(function(){
 					var isSelect = optionSelected == item.productCategoryId?'selected'
 							:'';
 							 optionHtml +='<option data-value="'
-								 +item.productCategroyId
+								 +item.productCategoryId
 								 +'"'
 								 +isSelect
 								 +'>'
@@ -132,7 +132,7 @@ $(function(){
 							$.toast('提交成功！');
 							$('#captcha_img').click();
 						}else{
-							$.toast('提交失败！');
+							$.toast('提交失败！'+ data.errMsg);
 							$('#captcha_img').click();
 						}
 					}

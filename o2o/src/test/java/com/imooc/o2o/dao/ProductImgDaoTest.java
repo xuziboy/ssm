@@ -21,6 +21,7 @@ public class ProductImgDaoTest extends BaseTest{
 	private ProductImgDao productImgDao;
 	
 	@Test
+	@Ignore
 	public void testABatchInsertProductImg()throws Exception{
 		ProductImg productImg1 = new ProductImg();
 		productImg1.setImgAddr("图片1");
@@ -50,9 +51,10 @@ public class ProductImgDaoTest extends BaseTest{
 	}
 	
 	@Test
-	@Ignore
 	public void testCDeleteProductImgByProductId() throws Exception{
 		//删除新增的两条图片
+		int effectedNum=productImgDao.deleteProductImgByProductId(8L);
+		assertEquals(2,effectedNum);
 	}
 }
 
