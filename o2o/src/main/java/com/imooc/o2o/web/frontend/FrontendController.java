@@ -22,4 +22,9 @@ public class FrontendController {
 	private String shopDetail() {
 		return "frontend/shopdetail";
 	}
+	
+	@RequestMapping(value="/productdetail",method=RequestMethod.GET)
+	private String productDetail() {
+		return "frontend/productdetail";
+	}
 }
