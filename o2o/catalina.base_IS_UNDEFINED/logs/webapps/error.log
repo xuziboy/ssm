@@ -1,0 +1,42 @@
+2018-10-10 22:13:21.394 [main] ERROR com.imooc.o2o.service.impl.WechatAuthServiceImpl-insertPersonInfo errororg.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'customer_flag' cannot be null
+### The error may involve com.imooc.o2o.dao.PersonInfoDao.insertPersonInfo-Inline
+### The error occurred while setting parameters
+### SQL: INSERT   INTO   tb_person_info(name,birthday,gender,phone,email,profile_img,customer_flag,shop_owner_flag,   admin_flag,create_time,last_edit_time,enable_status)   VALUES   (?,?,?,?,?,?,   ?,?,?,   ?,?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'customer_flag' cannot be null
+; SQL []; Column 'customer_flag' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'customer_flag' cannot be null
+2018-10-10 22:13:21.428 [main] ERROR com.imooc.o2o.service.impl.WechatAuthServiceImpl-insertWechatAuth errorcom.imooc.o2o.exceptions.WechatAuthOperationException: insertPersonInfo error:
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'customer_flag' cannot be null
+### The error may involve com.imooc.o2o.dao.PersonInfoDao.insertPersonInfo-Inline
+### The error occurred while setting parameters
+### SQL: INSERT   INTO   tb_person_info(name,birthday,gender,phone,email,profile_img,customer_flag,shop_owner_flag,   admin_flag,create_time,last_edit_time,enable_status)   VALUES   (?,?,?,?,?,?,   ?,?,?,   ?,?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'customer_flag' cannot be null
+; SQL []; Column 'customer_flag' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'customer_flag' cannot be null
+2018-10-10 22:15:15.585 [main] ERROR com.imooc.o2o.service.impl.WechatAuthServiceImpl-insertPersonInfo errororg.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'shop_owner_flag' cannot be null
+### The error may involve com.imooc.o2o.dao.PersonInfoDao.insertPersonInfo-Inline
+### The error occurred while setting parameters
+### SQL: INSERT   INTO   tb_person_info(name,birthday,gender,phone,email,profile_img,customer_flag,shop_owner_flag,   admin_flag,create_time,last_edit_time,enable_status)   VALUES   (?,?,?,?,?,?,   ?,?,?,   ?,?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'shop_owner_flag' cannot be null
+; SQL []; Column 'shop_owner_flag' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'shop_owner_flag' cannot be null
+2018-10-10 22:15:15.585 [main] ERROR com.imooc.o2o.service.impl.WechatAuthServiceImpl-insertWechatAuth errorcom.imooc.o2o.exceptions.WechatAuthOperationException: insertPersonInfo error:
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'shop_owner_flag' cannot be null
+### The error may involve com.imooc.o2o.dao.PersonInfoDao.insertPersonInfo-Inline
+### The error occurred while setting parameters
+### SQL: INSERT   INTO   tb_person_info(name,birthday,gender,phone,email,profile_img,customer_flag,shop_owner_flag,   admin_flag,create_time,last_edit_time,enable_status)   VALUES   (?,?,?,?,?,?,   ?,?,?,   ?,?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'shop_owner_flag' cannot be null
+; SQL []; Column 'shop_owner_flag' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'shop_owner_flag' cannot be null
+2018-10-10 22:16:34.17 [main] ERROR com.imooc.o2o.service.impl.WechatAuthServiceImpl-insertPersonInfo errororg.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'admin_flag' cannot be null
+### The error may involve com.imooc.o2o.dao.PersonInfoDao.insertPersonInfo-Inline
+### The error occurred while setting parameters
+### SQL: INSERT   INTO   tb_person_info(name,birthday,gender,phone,email,profile_img,customer_flag,shop_owner_flag,   admin_flag,create_time,last_edit_time,enable_status)   VALUES   (?,?,?,?,?,?,   ?,?,?,   ?,?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'admin_flag' cannot be null
+; SQL []; Column 'admin_flag' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'admin_flag' cannot be null
+2018-10-10 22:16:34.17 [main] ERROR com.imooc.o2o.service.impl.WechatAuthServiceImpl-insertWechatAuth errorcom.imooc.o2o.exceptions.WechatAuthOperationException: insertPersonInfo error:
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'admin_flag' cannot be null
+### The error may involve com.imooc.o2o.dao.PersonInfoDao.insertPersonInfo-Inline
+### The error occurred while setting parameters
+### SQL: INSERT   INTO   tb_person_info(name,birthday,gender,phone,email,profile_img,customer_flag,shop_owner_flag,   admin_flag,create_time,last_edit_time,enable_status)   VALUES   (?,?,?,?,?,?,   ?,?,?,   ?,?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'admin_flag' cannot be null
+; SQL []; Column 'admin_flag' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'admin_flag' cannot be null

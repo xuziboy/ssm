@@ -13,10 +13,19 @@ import com.imooc.o2o.entity.Area;
 public class AreaServiceTest extends BaseTest{
 	@Autowired
 	private AreaService areaService;
+	@Autowired
+	private CacheService cacheService;
+	@SuppressWarnings("static-access")
 	@Test
 	public void tesGetAreaList() {
 		List<Area>areaList = areaService.getAreaList();
-		assertEquals("西苑",areaList.get(0));
+		assertEquals(4,areaList.size());
+		cacheService.removeFromCache(areaService.AREALISTKEY);
+		areaList = areaService.getAreaList();
+		
+			
+
+
 	}
 
 }
