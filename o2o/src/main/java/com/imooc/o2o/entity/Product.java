@@ -12,6 +12,9 @@ public class Product {
 	private String normalPrice;
 	//促销价
 	private String promotionPrice;
+	
+	//商品积分
+	private Integer point;
 	private Integer priority;
 	private Date createTime;
 	private Date lastEditTime;
@@ -99,6 +102,12 @@ public class Product {
 	}
 	public void setEnableStatus(Integer enableStatus) {
 		this.enableStatus = enableStatus;
+	}
+	public Integer getPoint() {
+		return point;
+	}
+	public void setPoint(Integer point) {
+		this.point = point;
 	}
 
 }

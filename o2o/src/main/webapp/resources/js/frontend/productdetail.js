@@ -20,6 +20,7 @@ $(function(){
 				$('#product-desc').html(product.productDesc);
 				$('#normal-price').html(product.normalPrice);
 				$('#promotion-price').html(product.promotionPrice);
+				$('#point').html(product.point);
 				
 				product.productImgList.map(function(item,index){
 					html +='<div valign="bottom" class="card-header color-white no-border no-padding"><img class="card-cover" src="'

@@ -6,12 +6,12 @@
 	<insert	id="insertProduct" parameterType="com.imooc.o2o.entity.Product"
 	useGeneratedKeys="true" keyProperty="productId" keyColumn="product_id">
 		insert into
-		tb_product(product_name,product_desc,img_addr,
+		tb_product(product_name,product_desc,img_addr,point
 		normal_price,promotion_price,priority,create_time,
 		last_edit_time,enable_status,product_category_id,
 		shop_id)
 		values
-		(#{productName},#{productDesc},#{imgAddr},#{normalPrice},
+		(#{productName},#{productDesc},#{imgAddr},#{point},#{normalPrice},
 		#{promotionPrice},#{priority},#{createTime},#{lastEditTime},
 		#{enableStatus},#{productCategory.productCategoryId},#{shop.shopId}
 		)	
@@ -21,6 +21,7 @@
 	    <result column="product_name" property="productName"/>
 	    <result column="product_desc" property="productDesc"/>
 	    <result column="img_addr" property="imgAddr"/>
+	   	<result column="point" property="point"/>
 	    <result column="normal_price" property="normalPrice"/>
 	    <result column="promotion_price" property="promotionPrice"/>
 	    <result column="priority" property="priority"/>
@@ -54,6 +55,7 @@
 	    p.product_name,
 	    p.product_desc,
 	    p.img_addr,
+	    p.point,
 	    p.normal_price,
 	    p.promotion_price,
 	    p.priority,
@@ -85,6 +87,7 @@
 	        <if test="productName!=null">product_name=#{productName},</if>
 	        <if test="productDesc!=null">product_desc=#{productDesc},</if>
 	        <if test="imgAddr!=null">img_addr=#{imgAddr},</if>
+	        <if test="point!=null">point=#{point},</if>
 	        <if test="normalPrice!=null">normal_price=#{normalPrice},</if>
 	        <if test="promotionPrice!=null">promotion_price=#{promotionPrice},</if>
 	        <if test="priority!=null">priority=#{priority},</if>
