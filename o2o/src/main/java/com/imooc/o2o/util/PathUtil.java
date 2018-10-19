@@ -25,5 +25,13 @@ public class PathUtil {
 		return imagePath.replace("/", seperator);
 		
 	}
+	public static String getPersonInfoImagePath() {
+//		String personInfoImagePath = "/upload/images/item/personinfo/";
+		String personInfoImagePath = "/o2oshop/personinfo/";
+		personInfoImagePath = personInfoImagePath.replace("/", seperator);
+		return personInfoImagePath;
+	}
+
+
 
 }

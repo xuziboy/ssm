@@ -81,7 +81,7 @@ public class DESUtil {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(getEncryptString("root"));
+		System.out.println(getEncryptString("xuziboy"));
 		System.out.println(getEncryptString("Chenjinxu+_987"));
 		System.out.println(getDecryptString("EapQdrBWwPAMZCt6NDZVsA=="));
 	}

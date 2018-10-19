@@ -40,7 +40,6 @@ public class WechatLoginController {
 	private static Logger log = LoggerFactory
 			.getLogger(WechatLoginController.class);
 	private static final String FRONTEND = "1";
-	private static final String SHOPEND = "2";
 	@Autowired
 	private PersonInfoService personInfoService;
 	@Autowired
@@ -50,7 +49,7 @@ public class WechatLoginController {
 	public String doGet(HttpServletRequest request, HttpServletResponse response) {
 		log.debug("weixin login get...");
 		String code = request.getParameter("code");
-		String roleType = request.getParameter("State");
+		String roleType = request.getParameter("state");
 		log.debug("weixin login code:" + code);
 
 		WechatUser user = null;
